@@ -1,0 +1,63 @@
+.BubbleBar {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  height: fit-content;
+  width: fit-content;
+  margin: 0 8px 12px 0;
+  visibility: hidden;
+  text-align: center;
+
+  & * {
+    font-weight: 400;
+    font-family: 'Nunito';
+    font-size: 16px;
+  }
+
+  & > input, & > span {
+    color: var(--offBlack);
+    font-size: 16px;
+  }
+
+  .placeholder {
+    position: absolute;
+    left: 14px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    padding-top: 4px;
+    height: 24px;
+    pointer-events: none;
+  }
+  
+  input {
+    height: 100%;
+    color: #3c3c3cd0;
+    border: 1px solid var(--offBlack);
+    border-radius: 18px;
+    background: none;
+    padding: 6px 12px;
+    font-size: 16px;
+    width: 0;
+    max-width: calc(100vw - 72px);
+    padding-right: 32px;
+  }
+
+  #psuedo {
+    position: absolute;
+    width: fit-content;
+    white-space: pre;
+    visibility: hidden;
+  }
+
+  .complete {
+    position: absolute;
+    right: 12px;
+    top: 0;
+    bottom: 0;
+    height: 14px;
+    margin: auto;
+    padding-top: 1px;
+  }
+}
+

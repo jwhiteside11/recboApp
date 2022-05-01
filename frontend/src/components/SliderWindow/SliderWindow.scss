@@ -1,0 +1,21 @@
+.SliderWindow {
+  position: relative;
+  transition: 0.5s height ease;
+  overflow: hidden;
+  
+  .perpet {
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .inner-slider {
+    transform: translateX(0);
+    transition: transform 0.4s ease;
+    display: inline-flex;
+    justify-content: flex-start;
+
+    & > div {
+      height: fit-content;
+    }
+  }
+}

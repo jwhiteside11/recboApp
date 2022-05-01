@@ -1,0 +1,108 @@
+.SmallCardCarousel {
+  --slideTime: 0.3s;
+  --blockCount: 0;
+  position: relative;
+  padding-bottom: 28px;
+
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    margin: 0 0 24px 24px;
+    text-align: start;
+  }
+
+  .carousel-contain {
+    position: relative;
+    height: 128px;
+
+    .tuple-contain {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      justify-items: center;
+      align-items: center;
+      width: 66vw;
+      height: 150px;
+      height: fit-content;
+      margin: 0 2vw;
+      transform: scale(1);
+      transition: all var(--slideTime) ease;
+      transition-property: transform;
+    }
+  
+    .tuple-display {
+      transform: scale(1.12);
+      justify-self: center;
+      z-index: 3;
+
+      & + .tuple-contain {
+        justify-self: flex-start;
+        z-index: 2;
+      }
+    }
+  
+    .slider {
+      position: absolute;
+      left: 0px;
+      transition: left var(--slideTime) ease-out;
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      padding-left: 15vw;
+      touch-action: none;
+    }
+
+    .l-btn, .r-btn {
+      position: absolute;
+      display: grid;
+      align-items: center;
+      width: 42px;
+      height: 80%;
+      top: 10%;
+      border-radius: 12px;
+      z-index: 4;
+    }
+  
+    .l-btn {
+      left: 0;
+      justify-content: flex-end;
+    }
+    .r-btn {
+      right: 0;
+      justify-content: flex-start;
+    }
+  }
+  
+  .control {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(var(--blockCount), 24px);
+    align-items: center;
+    justify-items: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 4px 0;
+    width: fit-content;
+    height: 14px;
+    touch-action: none;
+    z-index: 4;
+
+    .block {
+      height: 6px;
+      width: 6px;
+      border: 1px solid var(--offBlack);
+      border-radius: 4px;
+      background-color: #C6C6C6;
+      transition: all var(--slideTime) ease;
+      grid-row: 1;
+    }
+    .display-block {
+      height: 10px;
+      width: 10px;
+
+      background-color: white;
+    }
+  }
+}

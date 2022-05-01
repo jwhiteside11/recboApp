@@ -1,0 +1,65 @@
+.SliderBar {
+  --outerWidth: 98px;
+  $outerHeight: 32px;
+  $outerWidth: var(--outerWidth);
+  position: relative;
+  height: $outerHeight;
+  width: $outerWidth;
+  background-color: white;
+  border: 1px solid #3C3C3C;
+  border-radius: 8px;
+  overflow: hidden;
+
+  .slider-bkgd, .slider-frgd {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    & > div {
+      display: flex;
+      width: $outerHeight;
+      height: $outerHeight;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    & > div:last-child {
+      border-right: none;
+    }
+  }
+
+  .slider-bkgd {
+    height: 100%;
+    width: 100%;
+
+    & > div {
+      border-right: 1px solid #3C3C3C;
+      width: $outerHeight;
+      background-color: inherit;
+      transition: background-color 0.06s ease;
+
+      &:active {
+        background-color: var(--activeHighlight);
+      }
+    }
+  }
+
+  .slider-window, .slider-frgd {
+    position: absolute;
+    height: $outerHeight + 2;
+    left: 0;
+    transition: transform 0.4s ease;
+  }
+
+  .slider-window {
+    overflow: hidden;
+    width: $outerHeight + 2;
+    top: -1px;
+  }
+
+  .slider-frgd {
+    background-color: #3C3C3C;
+    width: $outerWidth;
+    top: 0;
+  }
+}

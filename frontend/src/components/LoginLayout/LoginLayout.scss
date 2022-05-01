@@ -1,0 +1,179 @@
+.LoginLayout {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .InputBar {
+    margin: 16px 2px;
+    width: 80vw;
+    max-width: 600px;
+  }
+
+  // .check-wrap {
+  //   padding: 32px;
+  //   padding-top: 64px;
+  // }
+
+  p {
+    margin: 8px 0;
+  }
+
+  .complete-sign-up {
+    margin: 48px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .InputBar {
+      margin: 8px 2px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      text-align: left;
+      width: 80vw;
+      max-width: 600px;
+    }
+
+    p {
+      margin: 16px 0 8px;
+    }
+  }
+
+  .login-wrap {
+    min-height: calc(100vh - 112px);
+    display: flex;
+    flex-direction: column;
+
+    .LargeButton {
+      align-self: center;
+    }
+
+  }
+  .login-top {
+    align-self: center;
+  
+    a {
+      display: block;
+      width: 132px;
+      height: 132px;
+      margin: 24px 0 4px 0;
+    }
+    
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  h2 {
+    color: var(--offBlack);
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    padding: 8px 0;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  & > div > hr {
+    border: 0;
+    border-bottom: 1px solid #C6C6C6;
+    width: 70%;
+    margin: 16px 15%;
+  }
+  
+  .new-to-wrap {
+    width: 80vw;
+    max-width: 600px;
+    margin: 8px 0 32px;
+    display: grid;
+  }
+
+  .growing {
+    animation: grow 0.5s ease forwards;
+  }
+
+  .shrinking {
+    animation: shrink 0.5s ease forwards;
+  }
+
+  .view-window {
+    position: relative;
+    overflow: hidden;
+    transition: height 0.5s ease;
+    transform-origin: top;
+  }
+  
+  .sign-up-succeeded {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 480px;
+    align-self: center;
+  
+    .success {
+      margin: 24px 0 30px;
+      width: fit-content;
+    }
+    
+    .verify {
+      margin-top: 30px;
+      text-align: start;
+    }
+    
+    .didnt {
+      font-size: 14px;
+      margin-bottom: 48px;
+      text-align: start;
+    }
+    
+    p {
+      text-align: start;
+      margin: 16px 32px;
+      font-size: 18px;
+    }
+    
+    h2 {
+      color: var(--offBlack);
+      width: fit-content;
+      height: fit-content;
+      font-size: 24px;
+      font-weight: 600;
+      padding: 16px 0;
+    }
+    
+    .bold {
+      font-weight: bold;
+    }
+    
+    & > hr {
+      border: 0;
+      border-bottom: 1px solid #C6C6C6;
+      width: 70%;
+      margin: 0;
+    }
+  }
+}
+
+@keyframes grow {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: fit-content;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    height: fit-content;
+  }
+  100% {
+    height: 0;
+  }
+}

@@ -1,0 +1,4 @@
+*.key
+*.pem
+Dockerfile
+docker-compose.yml

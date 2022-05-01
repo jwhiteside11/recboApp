@@ -1,0 +1,28 @@
+.RecipeIngredients {
+
+  p {
+    font: 500 18px 'Nunito';
+    margin: 0;
+    text-align: start;
+  }
+
+  .title {
+    font-weight: 700;
+    margin: 16px 0 6px 24px;
+  }
+
+  .listItem {
+    margin: 6px 0 6px 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .svgFC {
+      margin: 0 8px;
+    }
+  }
+
+  .ingredient-body {
+    margin-top: 16px;
+  }
+}

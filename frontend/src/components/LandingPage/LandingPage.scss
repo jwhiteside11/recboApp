@@ -1,0 +1,88 @@
+.LandingPage {
+  color: #3C3C3C;
+  background-color: var(--appBackground);
+
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 14px 0;
+  }
+  
+  h2 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 24px 0;
+    width: 80%;
+  }
+  
+  .landing-body {
+    display: grid;
+  }
+  
+  .landing-body > h1 {
+    display: inline-block;
+    justify-self: flex-start;
+    margin-left: 24px;
+  }
+  
+  .landing-body > h2 {
+    justify-self: center;
+  }
+  
+  .landing-body > p {
+    margin: 16px 30px 36px;
+    text-align: start;
+  }
+  
+  .welcome {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    margin-top: 16px;
+  }
+  
+  .welcome > h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+  
+  .sample-outer {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .sample-outer > div {
+    height: 252px;
+    width: 142px;
+    background-color: white;
+    border-radius: 6px;
+  }
+  
+  .find-wrap {
+    display: grid;
+    grid-template-columns: 140px auto;
+    justify-items: flex-end;
+    align-items: center;
+    margin: 0 16px 4px;
+  }
+  
+  .find-wrap > h1 {
+    justify-self: flex-start;
+  }
+  
+  .search-placeholder {
+    display: grid;
+    justify-items: center;
+    margin: 64px 0;
+  }
+  
+  .search-placeholder > h2 {
+    color: #818181;
+  }
+  
+  .search-input {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+  }
+}

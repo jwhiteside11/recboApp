@@ -1,0 +1,203 @@
+.EditRecipe {
+  --offBlacker: #0f0f0f;
+  margin-top: -16px;
+
+  .section-header {
+    display: grid;
+    grid-template-columns: 48px auto 1fr;
+    align-items: center;
+    background-color: var(--appBackground);
+    border-top: 1px solid #c6c6c6;
+    border-bottom: 1px solid #c6c6c6;
+    padding: 4px 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -16px;
+    z-index: 5;
+
+    h2 {
+      justify-self: flex-start;
+      color: var(--offBlack);
+      margin-left: 12px;
+      font-size: 24px;
+    }
+
+    .svgFC {
+      justify-self: flex-end;
+    }
+  }
+
+  .header-btn {
+    border-radius: 8px;
+    border: 1px solid var(--offBlack);
+    margin-right: 16px;
+    padding: 8px;
+  }
+
+  .header-btn-wrap {
+    display: flex;
+    justify-content: flex-end;
+
+  }
+
+  .add-input-btn {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+    width: fit-content;
+    border: 1px solid var(--offBlack);
+    border-radius: 8px;
+    margin: 8px 4px;
+
+    .svgFC {
+      justify-self: flex-end;
+    }
+
+    span {
+      font-size: 18px;
+      color: var(--offBlacker);
+      margin: 8px 16px 8px 6px;
+      padding: 0;
+      justify-self: flex-start;
+      font-weight: bold;
+    }
+  }
+
+  .input-btn-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin: 8px 12px 8px 0;
+  }
+
+  .titled-content {
+    display: grid;
+    grid-template-rows: 28px auto;
+    align-items: center;
+    margin: 16px 24px;
+
+    h3 {
+      margin: 0 0 ;
+      margin-left: 8px;
+      grid-row: 1;
+      align-self: flex-start;
+      justify-self: flex-start;
+      font-size: 19px;
+      color: var(--offBlacker);
+    }
+
+    .InputBox {
+      margin: 0 12px;
+    }
+  }
+
+  .add-image-btn {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    width: fit-content;
+    border: 1px solid var(--offBlack);
+    border-radius: 8px;
+    margin-bottom: 12px;
+
+    & > div {
+      display: grid;
+      grid-template-columns: 28px auto;
+      align-items: center;
+    }
+
+    .svgFC {
+      justify-self: flex-end;
+    }
+
+    span {
+      width: fit-content;
+      color: var(--offBlacker);
+      font-weight: bold;
+      font-size: 18px;
+      padding: 0;
+      margin: 8px 16px 8px 8px;
+      justify-self: flex-start;
+    }
+  }
+
+  .ingredient-item, .ingredient-title {
+    display: grid;
+    align-items: center;
+    margin: 12px 20px;
+
+    .svgFC {
+      justify-self: flex-start;
+
+      &:first-child {
+        margin-left: 10px;
+      }
+      &:last-child {
+        margin-left: 18px;
+      }
+    }
+
+    & > .InputBar {
+      height: 36px;
+      & > input {
+      font-size: 16px;
+      }
+
+      & > span {
+        font-size: 16px;
+        padding-top: 2px;
+      }
+    }
+  }
+
+  .x-wrap {
+    height: fit-content;
+    width: fit-content;
+    justify-self: flex-end;
+  }
+
+  .ingredient-item {
+    grid-template-columns: 32px auto 36px;
+  }
+
+  .ingredient-title {
+    
+    grid-template-columns: auto 36px;
+    //margin-top: 18px;
+    //padding-top: 17px;
+    //border-top: 1px solid black;
+
+    &:first-child {
+      border: none;
+      padding-top: 8px;
+    }
+  }
+
+  .instruction-step {
+    display: grid;
+    grid-template-columns: auto 36px;
+    grid-template-rows: 36px auto;
+    text-align: start;
+    margin: 16px 24px;
+
+    .svgFC {
+      grid-row: 1;
+      grid-column: 2;
+      justify-self: flex-end;
+    }
+
+    .InputBox {
+      grid-row: 2;
+      grid-column: 1 / 3;
+    }
+
+    span {
+      font-size: 16px;
+      color: var(--offBlacker);
+    }
+  }
+
+  .shake {
+    animation: shake 0.6s ease;
+  }
+}

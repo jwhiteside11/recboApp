@@ -1,0 +1,129 @@
+.ProfilePage {
+  --cardSize: 132px;
+  --cardWidth: calc(var(--cardSize) + (var(--cardSize) / 5));
+  display: grid;
+
+  h2 {
+    font: 600 20px 'Nunito';
+    margin: 8px 0;
+    color: black;
+  }
+
+  h3 {
+    font: 500 16px 'Nunito';
+    margin: 4px 0;
+    color: var(--offBlack);
+  }
+
+  h4 {
+    font: 500 14px 'Nunito';
+    margin: 4px 0;
+    color: var(--offBlack);
+  }
+
+  .profile-upper {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+
+    .image-contain {
+      width: 116px;
+      height: 116px;
+      background-color: white;
+      border: 1px solid #3c3c3c;
+      border-radius: 8px;
+      margin: 16px 0;
+    }
+
+    .icon-button {
+      position: absolute;
+      top: 0px;
+      right: 16px;
+    }
+  }
+
+  .profile-flavor {
+    margin-top: 16px;
+
+    h3 {
+      text-align: start;
+      margin: 0 0 8px 24px;
+    }
+
+    .bubble-contain {
+      color: var(--offBlack);
+      font: 500 16px 'Nunito';
+      text-align: start;
+      margin: 0 16px;
+
+      & > div {
+        height: 36px;
+        width: fit-content;
+        margin: 4px;
+        padding: 0 16px;
+        border: 1px solid var(--offBlack);
+        border-radius: 24px;
+        display: inline-flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .control-outer {
+    border-top: 1px solid #C6C6C6;
+    border-bottom: 1px solid #C6C6C6;
+    padding-top: 16px;
+    margin: 16px 0;
+  }
+
+  .profile-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+  }
+
+  .grid-view {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: calc((100% - 2 * var(--cardWidth)) / 3 + 2 * var(--cardWidth));
+    height: fit-content;
+    justify-self: center;
+    margin-bottom: 8px;
+
+    .RecipeCard {
+      margin: 8px 0;
+
+      &:nth-child(odd) {
+        justify-self: flex-start;
+      }
+      &:nth-child(even) {
+        justify-self: flex-end;
+      }
+      &:nth-child(1), &:nth-child(2) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .list-view {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .RecipeBar {
+      margin: 4px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  
+  .search-input {
+    padding: 0 16px;
+  }
+}

@@ -1,0 +1,55 @@
+.LargeButton {
+  width: fit-content;
+
+  .loading-wrap {
+    position: relative;
+    width: 128px;
+    margin: 24px 0;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+
+  .loading {
+    .overlay-bar {
+      animation: blur 2s ease infinite;
+    }
+
+    .btn-wrap {
+      opacity: 0.8;
+    }
+  }
+
+  .btn-wrap {
+    transition: opacity 0.2s ease;
+  }
+
+  .lrg-btn {
+    font: 700 24px 'Nunito';
+    padding: 12px 0;
+    border: none;
+    width: 100%;
+    border-radius: 6px;
+    color: white;
+    background-color: #D98D33;
+  }
+
+  .overlay-bar {
+    position: absolute;
+    height: 60px;
+    width: 72px;
+    left: -88px;
+    background-color: black;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6867121848739496) 20%, rgba(0,0,0,0.896796218487395) 35%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.9023984593837535) 65%, rgba(0,0,0,0.700717787114846) 80%, rgba(0,0,0,0) 100%);
+    opacity: 0.2
+  }
+}
+
+@keyframes blur {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(236px);
+  }
+}

@@ -1,0 +1,29 @@
+.RecipeInstructions {
+
+  p {
+    font: 500 16px 'Nunito';
+    text-align: start;
+    margin: 0;
+  }
+
+  .title {
+    font-weight: 600;
+  }
+
+  .step {
+    margin: 4px 16px 4px 24px;
+
+    & > p:first-child {
+      margin: 4px 0;
+      font-weight: 700;
+    }
+
+    & > p:last-child {
+      margin: 0 0 16px 8px;
+    }
+  }
+
+  .instruction-body {
+    margin-top: 16px;
+  }
+}

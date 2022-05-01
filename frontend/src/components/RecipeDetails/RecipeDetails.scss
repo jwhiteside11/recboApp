@@ -1,0 +1,99 @@
+.RecipeDetails {
+  position: relative;
+  color: var(--offBlack);
+  
+  h1, h2 {
+    text-align: start;
+    margin: 0;
+
+  }
+
+  h1 {
+    margin: 0;
+    padding: 4px 0 8px 7vw;
+    width: 75vw;
+    font: 500 21px 'Nunito';
+
+    display: -webkit-inline-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    line-height: 36px;
+    -webkit-line-clamp: 3;
+  }
+
+  h2 {
+    font: 500 16px 'Nunito';
+  }
+
+  .recipe-name {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .edit-btn {
+    position: absolute;
+    right: 16px;
+    top: 0;
+  }
+  .upper-info {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(2, 32px);
+    width: 80vw;
+    margin: 0 10vw;
+
+    .info-bar {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      h2 {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .banner {
+    width: 88vw;
+    height: 75vw;
+    background-color: white;
+    background-size: cover;
+    border: 1px solid var(--offBlack);
+    border-radius: 16px;
+    margin: 16px 6vw 21px;
+  }
+
+  .top-btn-row {
+    display: flex;
+    justify-content: space-between;
+    width: 76vw;
+    margin: 0 12vw;
+
+    .icon-button {
+      padding: 9px;
+    }
+  }
+
+  .btm-btn-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 21px 12vw;
+
+    & > div {
+      display: flex;
+      justify-content: space-around;
+      border: 1px solid var(--offBlack);
+      border-radius: 8px;
+      padding: 8px 12px;
+    }
+
+    h2 {
+      margin-left: 8px;
+    }
+  }
+
+  .bookmarked {
+    background-color: red;
+  }
+}

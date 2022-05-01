@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+  --appBackground: #F9F1E7;
+  --offBlack: #3C3C3C;
+  --activeHighlight: #b4b9c435;
+  font-family: 'Nunito';
+  font-weight: 400;
+}
+
+/* Buttons */
+
+.icon-button {
+  width: fit-content;
+  height: fit-content;
+  padding: 8px;
+  border: 1px solid var(--offBlack);
+  border-radius: 8px;
+  transition: all 0.09s ease;
+  transition-property: transform, background-color;
+
+  &:active {
+    transform: scale(0.96);
+    background-color: var(--activeHighlight);
+  }
+}
+
+/* Link Styles */
+
+a, a:link {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+a:visited {
+  color: var(--offBlack);
+}
+
+a:focus {
+  outline: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  outline: none;
+  color: rgb(90, 90, 90);
+}

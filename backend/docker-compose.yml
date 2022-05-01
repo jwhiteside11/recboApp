@@ -1,0 +1,92 @@
+version: "3.9"
+
+services:
+  reverseproxy:
+    build: ./reverseproxy
+    ports:
+      - 8443:443
+    restart: always
+    depends_on:
+      - recboapi
+      - authservice
+    networks:
+      - external
+      - auth-internal
+      - api-internal
+
+  forwardproxy:
+    build: ./forwardproxy
+    ports:
+      - 8800:8800
+    restart: always
+    networks:
+      - external
+      - auth-internal
+      - api-internal
+
+  recboapi:
+    build: ./recboAPI
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - HTTP_PROXY=http://forwardproxy:8800
+      - HTTPS_PROXY=http://forwardproxy:8800
+    restart: always
+    networks:
+      - api-internal
+
+  authservice:
+    build: ./authservice
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+    restart: always
+    networks:
+      - auth-internal
+      - api-internal
+
+  recipesearch:
+    image: typesense/typesense:0.22.2
+    environment:
+      - TYPESENSE_DATA_DIR=/data
+      - TYPESENSE_API_KEY=banana
+    volumes: 
+      - typesense-search-data:/data
+    expose:
+      - 8108
+    restart: always
+    networks:
+      - api-internal
+
+  usercredentials:
+    image: typesense/typesense:0.22.2
+    environment:
+      - TYPESENSE_DATA_DIR=/data
+      - TYPESENSE_API_KEY=banana
+    expose:
+      - 8108
+    volumes: 
+     - typesense-credential-data:/data
+    restart: always
+    networks:
+      - auth-internal
+
+networks:
+  auth-internal:
+    driver: bridge
+    internal: true
+  api-internal:
+    driver: bridge
+    internal: true
+  external:
+    driver: bridge
+  default:
+    driver: none
+
+
+volumes:
+  typesense-credential-data:
+    driver: local
+  typesense-search-data:
+    driver: local
+

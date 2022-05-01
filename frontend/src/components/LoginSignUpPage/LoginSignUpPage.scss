@@ -1,0 +1,13 @@
+.LoginSignUpPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 32px 0;
+
+  h2, p {
+    text-align: left;
+    width: 80vw;
+    max-width: 600px;
+  }
+}

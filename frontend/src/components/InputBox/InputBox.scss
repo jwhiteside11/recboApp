@@ -1,0 +1,44 @@
+.InputBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  background-color: white;
+  border: 1px solid #555555;
+  border-radius: 8px;
+  padding: 4px 8px;
+  overflow: auto;
+  min-height: 36px;
+
+  & > span:first-child {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    padding-top: 4px;
+    height: 24px;
+    color: rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    z-index: 3;
+  }
+  
+  textarea {
+    height: 100%;
+    border: none;
+    resize: none;
+    font: 500 16px 'Nunito';
+    position: relative;
+    top: 9px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.focused {
+    border: 1px solid #D98D33;
+    outline: 1px solid #D98D33;
+  }
+}
+

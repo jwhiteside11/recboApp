@@ -1,0 +1,106 @@
+.LibraryPage {
+  --cardSize: 132px;
+  --cardWidth: calc(var(--cardSize) + (var(--cardSize) / 5));
+
+  h1 {
+    font: 600 20px 'Nunito';
+    text-align: start;
+    margin: 8px 0 16px 32px;
+  }
+
+  .lib-sect {
+    display: grid;
+    margin: 8px 0 0;
+  }
+
+  .sect-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 148px;
+
+    p {
+      margin: 24px 0 8px;
+      opacity: 0.6;
+    }
+
+    hr {
+      width: 24%;
+      margin: 12px 0 0;
+      border: none;
+      border-top: 3px solid #000000;
+      border-radius: 4px;
+      opacity: 0.3;
+    }
+  }
+
+  .elem-window {
+    width: calc((100% - 2 * var(--cardWidth)) / 3 + 2 * var(--cardWidth));
+    justify-self: center;
+    overflow-y: hidden;
+    transition: 0.5s height ease;
+
+    .inner-window {
+      display: grid;
+      grid-template-columns: 50% 50%;
+  
+      & > div {
+        margin: 8px 0;
+        display: grid;
+        width: fit-content;
+  
+        &:nth-child(odd) {
+          justify-self: flex-start;
+        }
+        &:nth-child(even) {
+          justify-self: flex-end;
+        }
+        &:nth-child(1), &:nth-child(2) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  
+
+  .RecipeCard {
+    justify-content: flex-end;
+  }
+
+  .recipe-sect {
+    display: grid;
+  }
+
+  .see-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    hr {
+      width: 24%;
+      margin: 12px 0 8px;
+      border: none;
+      border-top: 3px solid #000000;
+      border-radius: 4px;
+      opacity: 0.3;
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: -4px;
+      font: 600 16px 'Nunito';
+      color: #000000;
+      opacity: 0.6;
+    }
+  }
+
+  .see-more-spacer {
+    height: 36px;
+  }
+
+  .PagePlaceholder {
+    height: calc(100vh - 278px);
+  }
+}

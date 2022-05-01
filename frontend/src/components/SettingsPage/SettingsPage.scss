@@ -1,0 +1,87 @@
+.SettingsPage {
+  text-align: start;
+  padding: 0 16px;
+
+  h2 {
+    font: 600 20px 'Nunito';
+    margin: 8px 0;
+    color: black;
+  }
+
+  h3 {
+    font: 500 16px 'Nunito';
+    margin: 4px 0;
+    color: var(--offBlack);
+  }
+
+  h4 {
+    font: 500 14px 'Nunito';
+    margin: 4px 0;
+    color: var(--offBlack);
+  }
+
+  .settings-upper {
+    text-align: center;
+    position: relative;
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+
+    .image-contain {
+      width: 116px;
+      height: 116px;
+      background-color: white;
+      border: 1px solid #3c3c3c;
+      border-radius: 8px;
+      margin: 16px 0;
+    }
+
+    .icon-button {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+  }
+
+  .cuisine, .personal {
+    margin: 16px 0;
+    
+    h3:first-child {
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      margin-left: 4px;
+    }
+  }
+
+  .input-sect {
+    display: grid;
+    grid-template-rows: auto;
+    margin: 0 16px;
+    align-items: center;
+    
+    & > .InputBar {
+      grid-column: 2;
+      height: 36px;
+      font-size: 14px;
+      margin: 4px 0;
+      
+      .password {
+        font-size: 20px;
+      }
+    }
+      
+    & > h4 {
+      grid-column: 1;
+    }
+
+    &.pw {
+      grid-template-columns: 50% 50%;
+    }
+
+    &.email {
+      grid-template-columns: 30% 70%;
+    }
+  }
+}

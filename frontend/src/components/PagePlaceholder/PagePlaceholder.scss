@@ -1,0 +1,19 @@
+.PagePlaceholder {
+  width: 100vw;
+  height: 60vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+  > div {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 96px auto;
+    width: 60%;
+  }
+
+  h2 {
+    color: #818181;
+    font: 500 16px 'Nunito';
+  }
+}

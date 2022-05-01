@@ -1,0 +1,79 @@
+.RecipePage {
+  
+  .recipe-wrap {
+    overflow: hidden;
+    padding-bottom: 48px;
+    min-height: calc(100% - 80px);
+    width: 100%;
+    transition: 0.5s height ease;
+    padding-top: 16px;
+    margin-top: -16px;
+  }
+
+  .perspective {
+    perspective: 1200px;
+  }
+  
+  & .flippedL {
+    transform: rotateY(-180deg);
+  }
+  
+  & .flippedR {
+    transform: rotateY(180deg);
+  }
+  
+  /* flip speed goes here */
+  .flipper {
+    transition: 0.5s transform;
+    transform-style: preserve-3d;
+    width: 100%;
+    
+    position: relative;
+  }
+  
+  /* hide back of pane during swap */
+  .front, .back {
+    backface-visibility: hidden;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+  }
+  
+  /* front pane, placed above back */
+  .front {
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+  
+  /* back, initially hidden pane */
+  .back {
+    transform: rotateY(180deg);
+  }
+
+  .recipe-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #C6C6C6;
+
+    & > div {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 12px 0 24px;
+      margin-left: 24px;
+
+      h1 {
+        font: 600 24px 'Nunito';
+        margin: 0;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .ref-wrap {
+    height: fit-content;
+  }
+}

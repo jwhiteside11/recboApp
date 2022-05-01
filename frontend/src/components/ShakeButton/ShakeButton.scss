@@ -1,0 +1,20 @@
+.ShakeButton {
+  height: fit-content;
+  width: fit-content;
+  
+  &.shake {
+    animation: shake 0.6s ease;
+  }
+}
+
+@keyframes shake {
+  0% { transform:translateX(0) }
+  5% { transform: translateX(2px) }
+ 15% { transform:translateX(-2px) }
+ 25% { transform:translateX(2px) }
+ 35% { transform:translateX(-2px) }
+ 50% { transform:translateX(2px) }
+ 60% { transform:translateX(-1px) }
+ 70% { transform: translateX(1px) }
+ 75% { transform:translateX(0) }
+}
